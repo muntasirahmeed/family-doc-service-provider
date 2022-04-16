@@ -1,0 +1,75 @@
+[
+  {
+    "id": 1,
+
+    "name": "Lung Diseases",
+    "details": {
+      "srt1": "You have to Clinic adfadfadfadf",
+      "srt2": "You have to Clinic",
+      "srt3": "You have to Clinic",
+      "srt4": "You have to Clinic",
+      "srt5": "You have to Clinic"
+    },
+    "img": "https://i.ibb.co/3hv305P/services1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Heart Diseases",
+    "details": {
+      "srt1": "You have to Clinic",
+      "srt2": "You have to Clinic",
+      "srt3": "You have to Clinic",
+      "srt4": "You have to Clinic",
+      "srt5": "You have to Clinic"
+    },
+    "img": "https://i.ibb.co/n7yb2gY/services2.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Orthopaedic",
+    "details": {
+      "srt1": "You have to Clinic",
+      "srt2": "You have to Clinic",
+      "srt3": "You have to Clinic",
+      "srt4": "You have to Clinic",
+      "srt5": "You have to Clinic"
+    },
+    "img": "https://i.ibb.co/998Ydvk/services6.jpg"
+  },
+  {
+    "id": 4,
+    "name": "General Surgery",
+    "details": {
+      "srt1": "You have to Clinic",
+      "srt2": "You have to Clinic",
+      "srt3": "You have to Clinic",
+      "srt4": "You have to Clinic",
+      "srt5": "You have to Clinic"
+    },
+    "img": "https://i.ibb.co/Gkcn4dN/services3.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Fever & Flu",
+    "details": {
+      "srt1": "You have to Clinic",
+      "srt2": "You have to Clinic",
+      "srt3": "You have to Clinic",
+      "srt4": "You have to Clinic",
+      "srt5": "You have to Clinic"
+    },
+    "img": "https://i.ibb.co/YWzKpQf/services4.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Dental Service",
+    "details": {
+      "srt1": "You have to Clinic",
+      "srt2": "You have to Clinic",
+      "srt3": "You have to Clinic",
+      "srt4": "You have to Clinic",
+      "srt5": "You have to Clinic"
+    },
+    "img": "https://i.ibb.co/XLSjs1w/services5.jpg"
+  }
+]
