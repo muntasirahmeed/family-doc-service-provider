@@ -2,7 +2,7 @@ import { CheckCircleIcon } from "@heroicons/react/solid";
 import React from "react";
 
 const Service = ({ service }) => {
-  const { name, id, img, details } = service;
+  const { name,  img, details } = service;
 
   return (
     <div>
