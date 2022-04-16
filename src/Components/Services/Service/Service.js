@@ -6,7 +6,7 @@ const Service = ({ service }) => {
 
   return (
     <div>
-      <div className="font-poppins w-[350px] mx-auto bg-teal-50 rounded-md">
+      <div className="font-poppins w-[350px] mx-auto bg-grid-50 rounded-md">
         <img className="p-2 rounded-xl" src={img} alt="" />
         <div className="px-3 pb-5">
           <h1 className="text-2xl pl-2 my-3 text-cyan-700 font-semibold">{name}</h1>
