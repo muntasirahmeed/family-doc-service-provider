@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import {
+  useAuthState,
+  useSignInWithEmailAndPassword,
+} from "react-firebase-hooks/auth";
 import toast from "react-hot-toast";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../Firebase/firebase.init";
 import Navber from "../../Navber/Navber";
 import Spinner from "../../Spinner/Spinner";
@@ -12,11 +15,15 @@ const Login = () => {
   const [password, setPassword] = useState({ value: "", error: "" });
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
+  const [user1] = useAuthState(auth);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
   useEffect(() => {
     if (user) {
-      toast.success('Successfull')
+      toast.success("Successfull");
     }
-  },[user])
+  }, [user]);
   useEffect(() => {
     if (error) {
       if (error?.message.includes("password")) {

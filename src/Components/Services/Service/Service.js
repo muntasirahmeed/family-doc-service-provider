@@ -1,8 +1,10 @@
 import { CalendarIcon, CheckCircleIcon } from "@heroicons/react/solid";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Service = ({ service }) => {
-  const { name,regPrice, price, img, details } = service;
+  const { name, regPrice, price, img, details } = service;
+  const navigate = useNavigate()
 
   return (
     <div>
@@ -49,7 +51,9 @@ const Service = ({ service }) => {
             </p> */}
           </div>
 
-          <button className="bg-teal-700 hover:bg-teal-800 md:duration-500 ease-in-out w-full mt-3 text-white px-4 py-2 rounded font-semibold flex items-center justify-center mx-2">
+          <button className="bg-teal-700 hover:bg-teal-800 md:duration-500 ease-in-out w-full mt-3 text-white px-4 py-2 rounded font-semibold flex items-center justify-center mx-2"
+          onClick={()=>navigate('/checkout')}
+          >
             <CalendarIcon className="w-5 mr-2"></CalendarIcon>
             Book Appoinment
           </button>
