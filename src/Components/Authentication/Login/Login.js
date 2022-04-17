@@ -1,6 +1,8 @@
+import { async } from "@firebase/util";
 import React, { useEffect, useState } from "react";
 import {
   useAuthState,
+  useSendPasswordResetEmail,
   useSignInWithEmailAndPassword,
 } from "react-firebase-hooks/auth";
 import toast from "react-hot-toast";
@@ -13,26 +15,27 @@ import SocialLogin from "../SocialLogin/SocialLogin";
 const Login = () => {
   const [email, setEmail] = useState({ value: "", error: "" });
   const [password, setPassword] = useState({ value: "", error: "" });
-  const [signInWithEmailAndPassword, loading, error] =
+  const [signInWithEmailAndPassword, user1, loading, error] =
     useSignInWithEmailAndPassword(auth);
-  const [user] = useAuthState(auth);
+  const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
+  const [user2] = useAuthState(auth);
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
   useEffect(() => {
-    if (user) {
-      toast.success("Successfull" ,{id:1});
+    if (user1 || user2) {
+      toast.success("Successfull", { id: 1 });
       navigate(from, { replace: true });
     }
-  }, [user]);
+  }, [user2]);
   useEffect(() => {
     if (error) {
-      if (error?.message.includes("password")) {
-        toast.error("Wrong Password");
-      } else if (error?.message.includes("user-not-found")) {
-        toast.error("Email not register");
+      if (error?.message?.includes("password")) {
+        toast.error("Wrong Password", { id: 2 });
+      } else if (error?.message?.includes("user-not-found")) {
+        toast.error("Email not register", { id: 3 });
       } else {
-        toast.error(error.message);
+        toast.error(error?.message);
       }
     }
   }, [error]);
@@ -52,7 +55,14 @@ const Login = () => {
       setPassword({ value: "", error: "Password should have 8 character" });
     }
   };
-
+  const resetPassword = async () => {
+    if (email.value) {
+      await sendPasswordResetEmail(email);
+      toast.success("Password Reset Email Sent", { id: 1 });
+    } else {
+      toast.error("Please Enter Email");
+    }
+  };
   const submitFrom = (event) => {
     event.preventDefault();
     if (email.value && password.value) {
@@ -105,14 +115,27 @@ const Login = () => {
               <button className="mt-5 w-full text-white bg-cyan-700 font-semibold py-2 rounded-md  tracking-wide">
                 Login
               </button>
-              <p className="text-center mt-3 text-gray-700">
-                <small>
-                  Don't have an account ?{" "}
-                  <Link className="text-cyan-600" to="/signup">
-                    Register
-                  </Link>
-                </small>
-              </p>
+              <div>
+                <p className="text-center mt-3 text-gray-700">
+                  <small>
+                    Don't have an account ?{" "}
+                    <Link className="text-cyan-600" to="/signup">
+                      Register
+                    </Link>
+                  </small>
+                </p>
+                <p className="text-center  text-gray-700">
+                  <small>
+                    Forget Password ?{" "}
+                    <span
+                      onClick={async () => resetPassword()}
+                      className="text-cyan-600 cursor-pointer"
+                    >
+                      Reset
+                    </span>
+                  </small>
+                </p>
+              </div>
               {/* or section  */}
               <SocialLogin></SocialLogin>
             </div>

@@ -9,12 +9,12 @@ const About = () => {
         {/* <h1 className="text-5xl uppercase animate-none  font-semibold  text-center mt-10  text-cyan-700 font-mono">
           About <span className="text-rose-700">Me</span>
         </h1> */}
-        <div className="flex items-center flex-col md:flex-row justify-center  md:justify-evenly h-[85vh]">
+        <div className="flex items-center flex-col md:flex-row justify-center  md:justify-evenly h-full  md:h-[85vh]">
           <div className="w-full md:w-1/2  mt-3 md:mt-0 ">
             <img className="  w-[400px] block mx-auto" src={myImg} alt="" />
           </div>
           <div className="w-full md:w-1/2 text-center md:text-left mt-10 md:mt-0">
-            <h1 className="text-5xl uppercase mb-16 text-left animate-none  font-semibold   mt-10  text-cyan-700 font-mono">
+            <h1 className="text-5xl uppercase mb-8 md:mb-16 text-center md:text-left animate-none  font-semibold   mt-10  text-cyan-700 font-mono">
               About <span className="text-rose-700">Me</span>
             </h1>
             <h1 className="text-4xl  font-mono uppercase font-semibold text-cyan-700">
@@ -30,14 +30,14 @@ const About = () => {
             </h2>
             <p className="font-poppins text-sm capitalize font-semibold text-justify  mt-1  text-gray-500 mb-10 md:mb-5">
               If allah helps me , in this is year my goal is to get a job
-              otherwise get paid or free intership, if i will achieve this goal
+              otherwise get a paid or free intership, if i will achieve this goal
               then my next vision will be to update myself as a fully
               proffessional{" "}
               <span className="text-orange-500 uppercase font-bold mx-2">
                 mern stack developer
               </span>{" "}
               and insha allah i will achieve my goal beacause i am very
-              passionate about my vission. pray for me allah hafez{" "}
+              passionate about my vission. pray for me .
             </p>
           </div>
         </div>

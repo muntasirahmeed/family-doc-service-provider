@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import {
   useAuthState,
   useCreateUserWithEmailAndPassword,
+  useSendEmailVerification,
 } from "react-firebase-hooks/auth";
 import toast from "react-hot-toast";
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -17,13 +18,13 @@ const SignUp = () => {
   const [confrimPass, setCofrimPass] = useState({ value: "", error: "" });
   const [createUserWithEmailAndPassword, laoding, error] =
     useCreateUserWithEmailAndPassword(auth);
+  const [sendEmailVerification, sending] = useSendEmailVerification(auth);
   const [user] = useAuthState(auth);
   const navigate = useNavigate();
   const location = useLocation();
-  const from = location.state?.from?.pathname || "/chekout";
+  const from = location.state?.from?.pathname || "/";
   useEffect(() => {
     if (user) {
-      toast.success("Successfull");
       navigate(from, { replace: true });
     }
   }, [user]);
@@ -68,10 +69,12 @@ const SignUp = () => {
       setCofrimPass({ value: confirmpass, error: "" });
     }
   };
-  const submitFrom = (event) => {
+  const submitFrom = async (event) => {
     event.preventDefault();
     if (email.value && password.value && confrimPass.value && name.value) {
-      createUserWithEmailAndPassword(email.value, password.value);
+      await createUserWithEmailAndPassword(email.value, password.value);
+      await sendEmailVerification();
+      toast.success("Varification Email Sent");
     }
   };
   return (
