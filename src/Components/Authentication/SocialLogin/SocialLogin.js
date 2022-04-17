@@ -9,7 +9,7 @@ const SocialLogin = () => {
           <div className="text-gray-600 mx-4">Or</div>
           <div className="h-[2px] bg-gray-500 rounded-full w-full"></div>
         </div>
-        <div className="bg-gray-200 rounded-full flex items-center justify-center py-1 shadow md:shadow-gray-300 mx-10 mt-4 ">
+        <div className="bg-slate-100 rounded-full flex items-center justify-center py-1 shadow shadow-gray-300 mx-10 mt-4 cursor-pointer hover:bg-slate-200 duration-500 ease-out">
           <img className="h-7 rounded-full mr-5" src={logo} alt="" />
           <p className="font-semibold text-cyan-900">Sign With Google</p>
         </div>
