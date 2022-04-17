@@ -26,7 +26,7 @@ const Header = () => {
           <div className="flex justify-center md:justify-end">
             {" "}
             <img
-              className="rounded-full w-[300px]  mb-10 md:w-[450px] "
+              className="rounded-full w-[300px]  mb-10 md:w-[450px]  "
               src={doctor}
               alt=""
             />

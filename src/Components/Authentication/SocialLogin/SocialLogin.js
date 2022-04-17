@@ -1,15 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import logo from "../../../Images/logo/google.png";
-import { useSignInWithGoogle } from "react-firebase-hooks/auth";
+import {
+  useAuthState,
+  useSignInWithGoogle,
+} from "react-firebase-hooks/auth";
 import auth from "../../../Firebase/firebase.init";
+import { useNavigate } from "react-router-dom";
+
 const SocialLogin = () => {
-  const [signInWithGoogle,user,loading,error] = useSignInWithGoogle(auth);
-  if (user) {
-    console.log(user);
-  }
-  if (error) {
-    console.log(error);
-  }
+  const [signInWithGoogle] = useSignInWithGoogle(auth);
+  const [user] = useAuthState(auth);
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (user) {
+      navigate("/");
+    }
+  }, [user]);
+
   return (
     <div>
       <div className="mt-2 font-poppins">
