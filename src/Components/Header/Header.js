@@ -1,11 +1,11 @@
 import React from "react";
 import doctor from "../../Images/doctor2.png";
-import Naver from "../Navber/Naver";
+import Navber from "../Navber/Navber";
 import "./Header.css";
 const Header = () => {
   return (
     <div className=" banner ">
-      <Naver></Naver>
+      <Navber></Navber>
 
       <div className=" max-w-[1280px] mx-auto  flex flex-col-reverse md:flex-row justify-between items-center h-full md:h-[90vh] px-10 ">
         <div className=" w-full md:w-6/12 text-center py-10 md:text-left">

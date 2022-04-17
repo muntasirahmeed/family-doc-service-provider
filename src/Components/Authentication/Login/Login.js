@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Naver from "../../Navber/Naver";
+import Navber from "../../Navber/Navber";
 import SocialLogin from "../SocialLogin/SocialLogin";
 
 const Login = () => {
   return (
-    <div className="banner">
-      <Naver></Naver>
+    <div className="banner2">
+      <Navber></Navber>
       <div className="h-[90vh] flex justify-center items-center w-full font-poppins">
         <form>
           <div className="bg-gray-100 px-10 py-8 rounded-xl w-screen shadow-md max-w-sm">
@@ -35,10 +35,10 @@ const Login = () => {
             <button className="mt-5 w-full text-white bg-cyan-700 font-semibold py-2 rounded-md  tracking-wide">
               Login
             </button>
-            <p className="text-center mt-3">
+            <p className="text-center mt-3 text-gray-700">
               <small>
                 Don't have an account ?{" "}
-                <Link className="text-cyan-500" to="/signup">
+                <Link className="text-cyan-600" to="/signup">
                   Register
                 </Link>
               </small>

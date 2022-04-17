@@ -2,7 +2,7 @@ import React from "react";
 import Experiences from "../Experiences/Experiences";
 
 import Header from "../Header/Header";
-import Naver from "../Navber/Naver";
+import Navber from "../Navber/Navber";
 import Services from "../Services/Services";
 
 const Home = () => {

@@ -1,18 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Naver from "../../Navber/Naver";
+import Navber from "../../Navber/Navber";
 import SocialLogin from "../SocialLogin/SocialLogin";
 
 const SignUp = () => {
   return (
-    <div className="banner">
-      <Naver></Naver>
-      <div className="  flex justify-center items-center w-full font-poppins ">
+    <div className="banner2">
+      <Navber></Navber>
+      <div className="h-[90vh]  flex justify-center items-center w-full font-poppins ">
         <form>
           <div className="bg-gray-100 px-10 py-8 rounded-xl w-screen shadow-md max-w-sm">
-            <h1 className="text-center font-semibold text-rose-700 text-2xl">
-              FAMILY DOC
-            </h1>
+          <div className="text-center  rounded-xl  px-2 text-2xl font-semibold flex  justify-center space-x-3">
+              <h1 className="text-cyan-700 ">JOIN</h1>
+              <p className="text-rose-700">WITH ME</p>
+            </div>
             <div className="space-y-4 mt-10">
               <div>
                 <input
@@ -49,13 +50,13 @@ const SignUp = () => {
               </div>
             </div>
 
-            <button className="mt-5 w-full text-white bg-rose-700 font-semibold py-2 rounded-md  tracking-wide">
+            <button className="mt-5 w-full text-white bg-cyan-700 font-semibold py-2 rounded-md  tracking-wide">
               Register
             </button>
-            <p className="text-center mt-3">
-              <small>
+            <p className="text-center text-gray-700 mt-3">
+              <small >
                 Already have an account ?{" "}
-                <Link className="text-rose-500" to="/login">
+                <Link className="text-cyan-600" to="/login">
                   Login
                 </Link>
               </small>

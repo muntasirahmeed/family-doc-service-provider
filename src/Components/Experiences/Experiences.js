@@ -43,7 +43,7 @@ const Experiences = () => {
   return (
     <div className="font-poppins bg-cyan-50 py-10 ">
       <div className="max-w-[1280px] mx-auto px-10 gap-5">
-        <h1 className="mx-auto text-center pb-5 text-2xl md:text-4xl border-b-2 w-64 border-cyan-600 text-cyan-700 font-semibold ">
+        <h1 className="text-center pb-5 text-2xl md:text-4xl  text-cyan-700 font-semibold ">
            EXPERIENCES
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 justify-items-center my-10">

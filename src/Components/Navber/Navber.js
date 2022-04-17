@@ -1,12 +1,17 @@
 import React, { useState } from "react";
 import {
+  BookOpenIcon,
   CalendarIcon,
+  HomeIcon,
+  InformationCircleIcon,
+  LoginIcon,
   MenuAlt1Icon,
   ShoppingCartIcon,
   XIcon,
 } from "@heroicons/react/solid";
+import loginimg from '../../Images/logo/login-img.png'
 import { useNavigate } from "react-router-dom";
-const Naver = () => {
+const Navber = () => {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   return (
@@ -34,23 +39,35 @@ const Naver = () => {
               : "top-[-490px] md:opacity-100 opacity-0 transition-all ease-in"
           }`}
         >
-          <span className="">
-            {" "}
-            <CalendarIcon className="w-6 text-cyan-700"></CalendarIcon>{" "}
-          </span>
-
           <span
-            onClick={() => navigate("/login")}
-            className="block font-semibold text-lg text-gray-600 cursor-pointer"
+            className="font-semibold  text-gray-600 cursor-pointer flex items-center"
+            onClick={() => navigate("/")}
           >
-            Login
+            {" "}
+            <HomeIcon className="w-5 text-cyan-700 mr-1"></HomeIcon> Home
+          </span>
+          <span
+            className="font-semibold  text-gray-600 cursor-pointer flex items-center"
+            onClick={() => navigate("/blogs")}
+          >
+            {" "}
+            <BookOpenIcon className="w-6 text-cyan-700 mr-1"></BookOpenIcon>{" "}
+            Blogs
+          </span>
+          <span
+            className="font-semibold  text-gray-600 cursor-pointer flex items-center"
+            onClick={() => navigate("/about")}
+          >
+            {" "}
+            <InformationCircleIcon className="w-6 text-cyan-700 mr-1"></InformationCircleIcon>{" "}
+            About
           </span>
 
           <button
-            className="bg-cyan-700 text-white py-2 px-6 rounded-full  hover:bg-cyan-900 duration-300 font-semibold ease-in-out"
+            className="bg-cyan-700 text-sm text-white py-2 px-4 rounded-full  hover:bg-cyan-900 duration-300 font-semibold ease-in-out flex items-center"
             onClick={() => navigate("/signup")}
-          >
-            Sign Up
+          >Sign Up
+            <img className="w-5 ml-2 rounded-full bg-gray-100" src={loginimg} alt="" /> 
           </button>
         </div>
       </div>
@@ -58,4 +75,4 @@ const Naver = () => {
   );
 };
 
-export default Naver;
+export default Navber;

@@ -22,7 +22,7 @@ const Service = ({ service }) => {
               </p>
               <p className="text-md text-gray-600">
                 Reg price:{" "}
-                <span className="text-xl font-semibold text-rose-700">
+                <span className="text-xl font-semibold text-rose-700 opacity-80">
                   <del>${regPrice}</del>
                 </span>{" "}
               </p>
