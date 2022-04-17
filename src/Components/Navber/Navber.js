@@ -1,17 +1,21 @@
 import React, { useState } from "react";
 import {
   BookOpenIcon,
-  CalendarIcon,
   HomeIcon,
   InformationCircleIcon,
-  LoginIcon,
   MenuAlt1Icon,
-  ShoppingCartIcon,
   XIcon,
 } from "@heroicons/react/solid";
-import loginimg from '../../Images/logo/login-img.png'
+import loginimg from "../../Images/logo/login-img2.png.crdownload";
 import { useNavigate } from "react-router-dom";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../Firebase/firebase.init";
+import { signOut } from "firebase/auth";
 const Navber = () => {
+  const [user] = useAuthState(auth);
+  const handleSignOut = () => {
+    signOut(auth);
+  };
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   return (
@@ -63,12 +67,31 @@ const Navber = () => {
             About
           </span>
 
-          <button
-            className="bg-cyan-700 text-sm text-white py-2 px-4 rounded-full  hover:bg-cyan-900 duration-300 font-semibold ease-in-out flex items-center"
-            onClick={() => navigate("/signup")}
-          >Sign Up
-            <img className="w-5 ml-2 rounded-full bg-gray-100" src={loginimg} alt="" /> 
-          </button>
+          {user ? (
+            <button
+              className="bg-cyan-700 text-sm text-white py-2 px-4 rounded-full  hover:bg-cyan-900 duration-300 font-semibold ease-in-out flex items-center"
+              onClick={handleSignOut}
+            >
+              Sign Out
+              <img
+                className="w-5 ml-2 rounded-full bg-gray-100"
+                src={loginimg}
+                alt=""
+              />
+            </button>
+          ) : (
+            <button
+              className="bg-cyan-700 text-sm text-white py-2 px-4 rounded-full  hover:bg-cyan-900 duration-300 font-semibold ease-in-out flex items-center"
+              onClick={() => navigate("/signup")}
+            >
+              Sign Up
+              <img
+                className="w-5 ml-2 rounded-full bg-gray-100"
+                src={loginimg}
+                alt=""
+              />
+            </button>
+          )}
         </div>
       </div>
     </nav>
