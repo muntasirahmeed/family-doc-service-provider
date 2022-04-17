@@ -10,15 +10,6 @@ import toast from "react-hot-toast";
 
 const SocialLogin = () => {
   const [signInWithGoogle] = useSignInWithGoogle(auth);
-  const [user] = useAuthState(auth);
-  const navigate = useNavigate();
-  useEffect(() => {
-    if (user) {
-      toast.success('Successfull')
-      navigate("/");
-    }
-  }, [user]);
-
   return (
     <div>
       <div className="mt-2 font-poppins">

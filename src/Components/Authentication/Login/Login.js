@@ -13,15 +13,16 @@ import SocialLogin from "../SocialLogin/SocialLogin";
 const Login = () => {
   const [email, setEmail] = useState({ value: "", error: "" });
   const [password, setPassword] = useState({ value: "", error: "" });
-  const [signInWithEmailAndPassword, user, loading, error] =
+  const [signInWithEmailAndPassword, loading, error] =
     useSignInWithEmailAndPassword(auth);
-  const [user1] = useAuthState(auth);
+  const [user] = useAuthState(auth);
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
   useEffect(() => {
     if (user) {
-      toast.success("Successfull");
+      toast.success("Successfull" ,{id:1});
+      navigate(from, { replace: true });
     }
   }, [user]);
   useEffect(() => {

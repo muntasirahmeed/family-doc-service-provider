@@ -23,10 +23,10 @@ const Navber = () => {
       <div className="flex bg-transparent items-center justify-between py-4 md:px-10 font-poppins px-7 max-w-[1280px] mx-auto">
         <div className="">
           <h1
-            className="uppercase font-mono text-pink-700 font-semibold text-2xl  md:text-3xl cursor-pointer"
+            className="uppercase font-mono text-cyan-700 font-semibold text-2xl  md:text-3xl cursor-pointer"
             onClick={() => navigate("/")}
           >
-            Family-doc
+            Family<span className=" text-green-700">-</span><span className="text-rose-700">doc</span>
           </h1>
         </div>
         <div onClick={() => setOpen(!open)}>

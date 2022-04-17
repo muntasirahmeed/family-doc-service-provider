@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
+import {
+  useAuthState,
+  useCreateUserWithEmailAndPassword,
+} from "react-firebase-hooks/auth";
 import toast from "react-hot-toast";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../Firebase/firebase.init";
 import Navber from "../../Navber/Navber";
 import Spinner from "../../Spinner/Spinner";
@@ -12,16 +15,20 @@ const SignUp = () => {
   const [email, setEmail] = useState({ value: "", error: "" });
   const [password, setPassword] = useState({ value: "", error: "" });
   const [confrimPass, setCofrimPass] = useState({ value: "", error: "" });
-  const [createUserWithEmailAndPassword, user, laoding, error] =
+  const [createUserWithEmailAndPassword, laoding, error] =
     useCreateUserWithEmailAndPassword(auth);
+  const [user] = useAuthState(auth);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/chekout";
   useEffect(() => {
     if (user) {
-      toast.success('Successfull')
+      toast.success("Successfull");
+      navigate(from, { replace: true });
     }
-
   }, [user]);
   useEffect(() => {
-    if (error) {
+    if (error?.message) {
       if (error?.message.includes("already")) {
         toast.error("User already exist");
       } else {
