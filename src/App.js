@@ -7,6 +7,7 @@ import Footer from "./Components/Footer/Footer";
 import Blogs from "./Components/Blogs/Blogs";
 import NotFound from "./Components/NotFound/NotFound";
 import About from "./Components/About/About";
+import { Toaster } from "react-hot-toast";
 function App() {
   return (
     <div>
@@ -18,6 +19,7 @@ function App() {
         <Route path="/about" element={<About></About>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
+      <Toaster></Toaster>
       <Footer></Footer>
     </div>
   );

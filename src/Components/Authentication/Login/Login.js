@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
 import auth from "../../../Firebase/firebase.init";
 import Navber from "../../Navber/Navber";
@@ -11,6 +12,22 @@ const Login = () => {
   const [password, setPassword] = useState({ value: "", error: "" });
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
+  useEffect(() => {
+    if (user) {
+      toast.success('Successfull')
+    }
+  },[user])
+  useEffect(() => {
+    if (error) {
+      if (error?.message.includes("password")) {
+        toast.error("Wrong Password");
+      } else if (error?.message.includes("user-not-found")) {
+        toast.error("Email not register");
+      } else {
+        toast.error(error.message);
+      }
+    }
+  }, [error]);
   const handleEmail = (event) => {
     const userEmail = event.target.value;
     if (/\S+@\S+\.\S+/.test(userEmail)) {

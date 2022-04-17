@@ -6,6 +6,7 @@ import {
 } from "react-firebase-hooks/auth";
 import auth from "../../../Firebase/firebase.init";
 import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 
 const SocialLogin = () => {
   const [signInWithGoogle] = useSignInWithGoogle(auth);
@@ -13,6 +14,7 @@ const SocialLogin = () => {
   const navigate = useNavigate();
   useEffect(() => {
     if (user) {
+      toast.success('Successfull')
       navigate("/");
     }
   }, [user]);

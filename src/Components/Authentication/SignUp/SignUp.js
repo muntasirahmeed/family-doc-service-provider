@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
+import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
 import auth from "../../../Firebase/firebase.init";
 import Navber from "../../Navber/Navber";
@@ -13,9 +14,19 @@ const SignUp = () => {
   const [confrimPass, setCofrimPass] = useState({ value: "", error: "" });
   const [createUserWithEmailAndPassword, user, laoding, error] =
     useCreateUserWithEmailAndPassword(auth);
+  useEffect(() => {
+    if (user) {
+      toast.success('Successfull')
+    }
 
+  }, [user]);
   useEffect(() => {
     if (error) {
+      if (error?.message.includes("already")) {
+        toast.error("User already exist");
+      } else {
+        toast.error(error.message);
+      }
     }
   }, [error]);
   const handleName = (event) => {
