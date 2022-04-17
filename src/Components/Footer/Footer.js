@@ -26,7 +26,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="font-poppins text-gray-400 flex justify-between items-center mt-10 space-x-5">
-          <p className="w-6/12 text-sm"> Copyright &copy; 2022 Red Onion </p>
+          <p className="w-6/12 text-sm"> Copyright &copy; 2022 FAMILY DOC </p>
           <div className="flex space-x-6 text-center md:text-left font-poppins text-sm w-6/12 justify-around px-10">
             <p>Privacy Policy</p>
             <p>Trems of Use</p>

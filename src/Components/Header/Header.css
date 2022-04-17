@@ -3,10 +3,19 @@
   height: 100vh;
   background-image: url("https://img.freepik.com/free-photo/gray-wall-textures-background_74190-4389.jpg?w=740&t=st=1650135376~exp=1650135976~hmac=914dc54c443518b713d792121b957447169817c81f510fbffa42d11229f520bd");
   background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.banner2 {
+  width: 100%;
+  height: 100vh;
+  background-image: url("https://img.freepik.com/free-photo/gray-wall-textures-background_74190-4389.jpg?w=740&t=st=1650135376~exp=1650135976~hmac=914dc54c443518b713d792121b957447169817c81f510fbffa42d11229f520bd"),linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1));
+  background-repeat: no-repeat;
   background-blend-mode: overlay;
   background-size: cover;
   background-position: center;
 }
+
 @media only screen and (max-width: 600px) {
   .banner {
     height: 100%;

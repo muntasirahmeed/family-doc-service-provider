@@ -1,29 +1,24 @@
 import React, { useState } from "react";
-import { MenuAlt1Icon, ShoppingCartIcon, XIcon } from "@heroicons/react/solid";
+import {
+  CalendarIcon,
+  MenuAlt1Icon,
+  ShoppingCartIcon,
+  XIcon,
+} from "@heroicons/react/solid";
+import { useNavigate } from "react-router-dom";
 const Naver = () => {
-  /*  return (
-       <div className="bg-transparent   py-4  ">
-         <div className="flex justify-between px-10 max-w-[1280px] mx-auto">
-           <div className="logo text-cyan-700 font-semibold uppercase text-2xl font-mono">
-             Family-Doc
-           </div>
-           <div className="flex items-center space-x-5 text-cyan-700 font-poppins text-lg font-semibold">
-             <p>Home</p>
-             <p>Services</p>
-             <p>Chekout</p>
-             <p>Login</p>
-           </div>
-         </div>
-       </div>
-     );
-   }; */
-
+  const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   return (
-    <nav className="max-w-[1280px] mx-auto  bg-transparent w-full top-0 left-0">
-      <div className="flex items-center justify-between py-4 md:px-10 font-poppins px-7">
+    <nav className=" bg-transparent w-full top-0 left-0">
+      <div className="flex bg-transparent items-center justify-between py-4 md:px-10 font-poppins px-7 max-w-[1280px] mx-auto">
         <div className="">
-          <h1 className="uppercase font-mono text-rose-700 font-semibold text-2xl  md:text-3xl">Family-doc</h1>
+          <h1
+            className="uppercase font-mono text-rose-700 font-semibold text-2xl  md:text-3xl cursor-pointer"
+            onClick={() => navigate("/")}
+          >
+            Family-doc
+          </h1>
         </div>
         <div onClick={() => setOpen(!open)}>
           {open ? (
@@ -41,14 +36,20 @@ const Naver = () => {
         >
           <span className="">
             {" "}
-            <ShoppingCartIcon className="w-6 text-gray-600"></ShoppingCartIcon>{" "}
+            <CalendarIcon className="w-6 text-cyan-700"></CalendarIcon>{" "}
           </span>
 
-          <span className="block font-semibold text-lg text-gray-600 cursor-pointer">
+          <span
+            onClick={() => navigate("/login")}
+            className="block font-semibold text-lg text-gray-600 cursor-pointer"
+          >
             Login
           </span>
 
-          <button className="bg-cyan-700 text-white py-2 px-6 rounded-full  hover:bg-cyan-900 duration-300 font-semibold ease-in-out">
+          <button
+            className="bg-cyan-700 text-white py-2 px-6 rounded-full  hover:bg-cyan-900 duration-300 font-semibold ease-in-out"
+            onClick={() => navigate("/signup")}
+          >
             Sign Up
           </button>
         </div>
