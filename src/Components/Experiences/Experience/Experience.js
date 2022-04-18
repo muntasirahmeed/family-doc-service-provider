@@ -4,7 +4,7 @@ const Experience = ({ experience }) => {
   const { name, image, info } = experience;
   return (
     <div>
-      <div className=" w-[320px] rounded-md flex font-poppins flex-col justify-center py-10 px-5 bg-teal-50 ">
+      <div className=" w-[320px] rounded-md flex font-poppins flex-col justify-center py-10 px-5 bg-cyan-50 hover:shadow-lg duration-500 ease-in-out ">
         <div>
           <img className="w-28 h-32 block mx-auto " src={image} alt="" />
         </div>

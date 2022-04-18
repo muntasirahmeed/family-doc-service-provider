@@ -7,37 +7,37 @@ const Experiences = () => {
       id: 1,
       name: "KIND WITH PATIENT",
       image: "https://i.ibb.co/3Nr0YK6/img1.png",
-      info: "There are many variations of passages of Lorem Ipsum available, but the majority ",
+      info: "Once patient come in my cabin or i go to her home the patient must would be my friend ",
     },
     {
       id: 2,
       name: "IDEAL CHEKUP",
       image: "https://i.ibb.co/dPqt3qw/img2.png",
-      info: "There are many variations of passages of Lorem Ipsum available, but the majority ",
+      info: "Too many patient seeing experience benifits is , that i know what is tha problem ",
     },
     {
       id: 3,
       name: " 100+ OPERATIONS",
       image: "https://i.ibb.co/fFBMS8z/img3.png",
-      info: "There are many variations of passages of Lorem Ipsum available, but the majority",
+      info: "I have succesfully done this operations, so if you need me, don't hegitaded just take appointment",
     },
     {
       id: 4,
       name: "BEHAVE LIKE FRIEND",
       image: "https://i.ibb.co/MNSRzGd/img4.png",
-      info: "There are many variations of passages of Lorem Ipsum available, but the majority",
+      info: "I behave with cildrean like she/he is my friend and i this is my best degree to a doctor",
     },
     {
       id: 5,
       name: "UPDATED MEDICINE",
       image: "https://i.ibb.co/L1d1zPB/img5.png",
-      info: "There are many variations of passages of Lorem Ipsum available, but the majority ",
+      info: "I love to explore new medical science , that's why i can provide you updated medicine ",
     },
     {
       id: 6,
       name: "ONE OF BEST SERJON'S",
       image: "https://i.ibb.co/N9BBpJF/img6.png",
-      info: "There are many variations of passages of Lorem Ipsum available, but the majority",
+      info: "There are too many serjon here in bangladesh, and i am person who is in the top 100 doctors",
     },
   ];
   return (

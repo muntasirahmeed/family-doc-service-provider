@@ -1,37 +1,56 @@
+import {
+  BookmarkAltIcon,
+  BookOpenIcon,
+  HomeIcon,
+  PhoneIcon,
+  UserIcon,
+} from "@heroicons/react/solid";
 import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-slate-900 py-8 ">
+    <footer className="bg-slate-900 pt-8 pb-2 ">
       <div className="max-w-[1280px] mx-auto px-10">
         <div className="flex flex-col md:flex-row  md:justify-between items-center w-full space-y-10 md:space-y-0">
           <div className="w-full md:w-6/12 ">
-            <h1 className="text-4xl font-semibold text-gray-400 text-center md:text-left font-mono">
-             <span className="text-rose-700"> FAMILY-DOC</span>
-            </h1>
-          </div>
-          <div className="flex text-gray-300 font-poppins text-sm w-full  md:w-6/12 justify-around ">
-            <div className="flex flex-col  space-y-3 cursor-pointer">
-              <span>About online food</span>
-              <span>Read our blogs</span>
-              <span>Sign up to Deliver</span>
-              <span>Add you resturent</span>
+            <div>
+              <h1 className="text-4xl font-semibold text-gray-400 text-center md:text-left font-mono">
+                <span className="text-rose-700"> <span className="text-cyan-700">FAMILY</span>-<span>DOC</span> </span>
+              </h1>
+              <p className="text-gray-400 font-mono text-sm mt-3">
+                Hi mr./mrs. welcome to my website, if you are intersted to
+                booking my appointment and you are still confused you can see
+                the links provided footer section , click and explore the link
+                then you will get a idea
+              </p>
             </div>
-            <div className="flex flex-col space-y-3  cursor-pointer">
-              <span className="">Get help</span>
-              <span className="">Read FQAs</span>
-              <span className="">View all sites</span>
-              <span className="">Resturents near me</span>
+          </div>
+          <div className="flex flex-col md:flex-row text-gray-300 font-poppins text-sm w-full  md:w-6/12 justify-evenly ">
+            <div className=" space-y-1 mb-4  cursor-pointer">
+              <p className="">Get help</p>
+              <p className="">Read FQAs</p>
+              <p className="">View all sites</p>
+              <p className="">Resturents near me</p>
+            </div>
+            <div className="space-y-2">
+              <p className="flex items-center">
+                <HomeIcon className="w-4 mr-2"></HomeIcon>Ashulia, Savar ,Dhaka
+              </p>
+              <p className="flex items-center">
+                <UserIcon className="w-4 mr-2"></UserIcon> Dr. Sabrina Rahman
+              </p>
+              <p className="flex items-center">
+                <PhoneIcon className="w-4 mr-2"></PhoneIcon>+880-1639465255
+              </p>
+              <p className="flex items-center">
+                <BookmarkAltIcon className="w-4 mr-2"></BookmarkAltIcon>
+                muntasirahmed5255@gmail.com
+              </p>
             </div>
           </div>
         </div>
-        <div className="font-poppins text-gray-400 flex justify-between items-center mt-10 space-x-5">
-          <p className="w-6/12 text-sm"> Copyright &copy; 2022 FAMILY DOC </p>
-          <div className="flex space-x-6 text-center md:text-left font-poppins text-sm w-6/12 justify-around px-10">
-            <p>Privacy Policy</p>
-            <p>Trems of Use</p>
-            <p>Pricing</p>
-          </div>
+        <div className="mt-10  text-center text-gray-400 font-mono uppercase">
+          Allright Reserved &copy;Family-Doc for 2022
         </div>
       </div>
     </footer>

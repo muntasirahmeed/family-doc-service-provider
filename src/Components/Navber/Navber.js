@@ -4,6 +4,11 @@ import {
   HomeIcon,
   InformationCircleIcon,
   MenuAlt1Icon,
+  UserAddIcon,
+  UserCircleIcon,
+  UserGroupIcon,
+  UserIcon,
+  UserRemoveIcon,
   XIcon,
 } from "@heroicons/react/solid";
 import loginimg from "../../Images/logo/login-img.png";
@@ -27,7 +32,8 @@ const Navber = () => {
             className="uppercase font-mono text-cyan-700 font-semibold text-2xl  md:text-3xl cursor-pointer"
             onClick={() => navigate("/")}
           >
-            Family<span className=" text-green-700">-</span><span className="text-rose-700">doc</span>
+            Family<span className=" text-green-700">-</span>
+            <span className="text-rose-700">doc</span>
           </h1>
         </div>
         <div onClick={() => setOpen(!open)}>
@@ -46,22 +52,21 @@ const Navber = () => {
         >
           <CustomLink
             className="font-semibold   cursor-pointer flex items-center"
-            to='/'
+            to="/"
           >
             {" "}
             <HomeIcon className="w-5  mr-1"></HomeIcon> Home
           </CustomLink>
           <CustomLink
             className="font-semibold   cursor-pointer flex items-center"
-            to='/blogs'
+            to="/blogs"
           >
             {" "}
-            <BookOpenIcon className="w-6  mr-1"></BookOpenIcon>{" "}
-            Blogs
+            <BookOpenIcon className="w-6  mr-1"></BookOpenIcon> Blogs
           </CustomLink>
           <CustomLink
             className="font-semibold   cursor-pointer flex items-center"
-            to='/about'
+            to="/about"
           >
             {" "}
             <InformationCircleIcon className="w-6  mr-1"></InformationCircleIcon>{" "}
@@ -70,27 +75,19 @@ const Navber = () => {
 
           {user ? (
             <button
-              className="bg-cyan-700 text-sm text-white py-2 px-4 rounded-full  hover:bg-cyan-900 duration-300 font-semibold ease-in-out flex items-center"
+              className="bg-cyan-700 text-sm text-white py-1 px-3 rounded-full  hover:bg-cyan-900 duration-300 font-semibold ease-in-out flex items-center"
               onClick={handleSignOut}
             >
               Sign Out
-              <img
-                className="w-5 ml-2 rounded-full bg-gray-100"
-                src={loginimg}
-                alt=""
-              />
+              <UserCircleIcon className="w-6 ml-1"></UserCircleIcon>
             </button>
           ) : (
             <button
-              className="bg-cyan-700 text-sm text-white py-2 px-4 rounded-full  hover:bg-cyan-900 duration-300 font-semibold ease-in-out flex items-center"
+              className="bg-cyan-700 text-sm text-white py-1 px-3 rounded-full  hover:bg-cyan-900 duration-300 font-semibold ease-in-out flex items-center"
               onClick={() => navigate("/signup")}
             >
               Sign Up
-              <img
-                className="w-5 ml-2 rounded-full bg-gray-100"
-                src={loginimg}
-                alt=""
-              />
+              <UserCircleIcon className="w-6 ml-1"></UserCircleIcon>
             </button>
           )}
         </div>
