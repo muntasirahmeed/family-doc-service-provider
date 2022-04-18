@@ -6,7 +6,7 @@ import {
   MenuAlt1Icon,
   XIcon,
 } from "@heroicons/react/solid";
-import loginimg from "../../Images/logo/login-img2.png.crdownload";
+import loginimg from "../../Images/logo/login-img.png";
 import { useNavigate } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../Firebase/firebase.init";

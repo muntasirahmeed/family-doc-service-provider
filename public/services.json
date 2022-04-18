@@ -2,85 +2,73 @@
   {
     "id": 1,
 
-    "name": "Regular Chekup",
+    "name": "Assistant Serjon",
     "details": {
-      "srt1": "Provie some medicine",
-      "srt2": "Full weak health update",
-      "srt3": "You have to Clinic",
-      "srt4": "You have to Clinic",
-      "srt5": "You have to Clinic"
+      "srt1": "One O.T day",
+      "srt2": "More O.T to paid"
+      
     },
-    "img": "https://i.ibb.co/3hv305P/services1.jpg",
+    "img": "https://i.ibb.co/kQKzWbP/assistang-Serjon.jpg",
     "price":45,
     "regPrice":50
   },
   {
     "id": 2,
-    "name": "Heart Diseases",
+    "name": "Emergency Treatment",
     "details": {
-      "srt1": "You have to Clinic",
-      "srt2": "You have to Clinic",
-      "srt3": "You have to Clinic",
-      "srt4": "You have to Clinic",
-      "srt5": "You have to Clinic"
+      "srt1": "Any kind of emergency",
+      "srt2": "I will go with patient"
+     
     },
-    "img": "https://i.ibb.co/n7yb2gY/services2.jpg",
+    "img": "https://i.ibb.co/4m0trk5/emergency.jpg",
     "price":50,
     "regPrice":55
   },
   {
     "id": 3,
-    "name": "Orthopaedic",
+    "name": "Online Concultation",
     "details": {
-      "srt1": "You have to Clinic",
-      "srt2": "You have to Clinic",
-      "srt3": "You have to Clinic",
-      "srt4": "You have to Clinic",
-      "srt5": "You have to Clinic"
+      "srt1": "Anykind of problem",
+      "srt2": "Online prescription given"
+      
     },
-    "img": "https://i.ibb.co/998Ydvk/services6.jpg",
+    "img": "https://i.ibb.co/Ybwwst0/online.jpg",
     "price":60,
     "regPrice":65
   },
   {
     "id": 4,
-    "name": "General Surgery",
+    "name": "Painless Therapy",
     "details": {
-      "srt1": "You have to Clinic",
-      "srt2": "You have to Clinic",
-      "srt3": "You have to Clinic",
-      "srt4": "You have to Clinic",
-      "srt5": "You have to Clinic"
+      "srt1": "Give extra coolness",
+      "srt2": "Thiland Therapy"
+    
     },
-    "img": "https://i.ibb.co/Gkcn4dN/services3.jpg",
+    "img": "https://i.ibb.co/DCtgpJt/phesiyo-therapy.jpg",
     "price":70,
     "regPrice":75
   },
   {
     "id": 5,
-    "name": "Fever & Flu",
+    "name": "Psychological Help    ",
     "details": {
-      "srt1": "You have to Clinic",
-      "srt2": "You have to Clinic",
-      "srt3": "You have to Clinic",
-      "srt4": "You have to Clinic",
-      "srt5": "You have to Clinic"
+      "srt1": "Mental problem solve",
+      "srt2": "Do what i have should "
+      
     },
-    "img": "https://i.ibb.co/YWzKpQf/services4.jpg",
+    "img": "https://i.ibb.co/1dfBb6Z/physologicalhelp.jpg",
     "price":80,
     "regPrice":85
   },
   {
     "id": 6,
-    "name": "Dental Service",
+    "name": "Read Prescription",
     "details": {
-      "srt1": "You have to Clinic",
-      "srt2": "You have to Clinic",
-      "srt3": "You have to Clinic",
-      "srt4": "You have to Clinic",
-      "srt5": "You have to Clinic"
+      "srt1": "Read Other prescription",
+      "srt2": "Provide extra tips and tricks"
+      
     },
-    "img": "https://i.ibb.co/XLSjs1w/services5.jpg",
+    "img": "https://i.ibb.co/3sGrvcX/read-Report.jpg",
     "price":90,
     "regPrice":99
   }

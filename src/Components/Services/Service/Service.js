@@ -1,6 +1,6 @@
 import { CalendarIcon, CheckCircleIcon } from "@heroicons/react/solid";
 import React from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Service = ({ service }) => {
   const { name, regPrice, price, img, id,details } = service;
@@ -8,14 +8,14 @@ const Service = ({ service }) => {
 
   return (
     <div>
-      <div className="font-poppins w-[350px] mx-auto bg-grid-50 bg-neutral-100 rounded-md">
-        <img className="p-2 rounded-xl" src={img} alt="" />
-        <div className="px-3 pb-5 ">
-          <div className=" pl-2 pb-2">
+      <div className="font-poppins w-[350px] mx-auto bg-grid-50 bg-gray-100 shadow-md rounded-md">
+        <img className="p-2 rounded-xl w-[350px] h-[230px]" src={img} alt="" />
+        <div className="px-3 pb-3 ">
+          <div className="  pb-2">
             <h1 className="text-2xl py-3 text-cyan-700  font-semibold ">
               {name.toUpperCase()}
             </h1>
-            <div className="flex items-center justify-between px-1">
+            <div className="flex items-center justify-between ">
               <p className="text-md text-gray-600 ">
                 Price:{" "}
                 <span className="text-xl font-semibold text-cyan-700">
@@ -30,28 +30,24 @@ const Service = ({ service }) => {
               </p>
             </div>
           </div>
-          <div className="text-sm pl-2">
+          <div className="text-sm ">
             
             <p className="flex items-center text-gray-600 mb-1">
               {" "}
               <CheckCircleIcon className="w-4 mr-2 text-cyan-700"></CheckCircleIcon>{" "}
-              {/* {details?.srt1} */}
-              Lorem ipsum dolor sit amet,  
+         
+              {details?.srt1}  
             </p>
             <p className="flex items-center text-gray-600 mb-1">
               {" "}
               <CheckCircleIcon className="w-4 mr-2 text-cyan-700"></CheckCircleIcon>{" "}
-              {/* {details?.srt1} */}
-              Lorem ipsum dolor sit amet,
+            
+              {details?.srt2}  
             </p>
 
-            {/* <p className="text-sm text-center">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe
-              laborum consequuntur{" "}
-            </p> */}
           </div>
 
-          <button className="bg-cyan-700 hover:bg-cyan-800 md:duration-500 ease-in-out w-full mt-3 text-white px-4 py-2 rounded font-semibold flex items-center justify-center mx-2"
+          <button className="bg-cyan-700 hover:bg-cyan-800 md:duration-500 ease-in-out w-full mt-3 text-white px-4 py-2 rounded font-semibold flex items-center justify-center"
           onClick={()=>navigate(`/checkout/${id}`)}
           >
             <CalendarIcon className="w-5 mr-2"></CalendarIcon>
