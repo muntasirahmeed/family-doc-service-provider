@@ -49,7 +49,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="mt-10  text-center text-gray-400 font-mono uppercase">
+        <div className="mt-10  text-center text-gray-400 font-mono text-sm uppercase">
           Allright Reserved &copy;Family-Doc for 2022
         </div>
       </div>
