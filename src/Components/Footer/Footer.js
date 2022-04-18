@@ -1,6 +1,5 @@
 import {
   BookmarkAltIcon,
-  BookOpenIcon,
   HomeIcon,
   PhoneIcon,
   UserIcon,
@@ -17,7 +16,7 @@ const Footer = () => {
               <h1 className="text-4xl font-semibold text-gray-400 text-center md:text-left font-mono">
                 <span className="text-rose-700"> <span className="text-cyan-700">FAMILY</span>-<span>DOC</span> </span>
               </h1>
-              <p className="text-gray-400 font-mono text-sm mt-3">
+              <p className="text-gray-400 font-poppins text-sm mt-3">
                 Hi mr./mrs. welcome to my website, if you are intersted to
                 booking my appointment and you are still confused you can see
                 the links provided footer section , click and explore the link
@@ -49,7 +48,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="mt-10  text-center text-gray-400 font-mono text-sm uppercase">
+        <div className="mt-16  text-center text-gray-400 font-mono text-sm uppercase">
           Allright Reserved &copy;Family-Doc for 2022
         </div>
       </div>

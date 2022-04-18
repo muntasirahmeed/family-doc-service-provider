@@ -4,14 +4,9 @@ import {
   HomeIcon,
   InformationCircleIcon,
   MenuAlt1Icon,
-  UserAddIcon,
   UserCircleIcon,
-  UserGroupIcon,
-  UserIcon,
-  UserRemoveIcon,
   XIcon,
 } from "@heroicons/react/solid";
-import loginimg from "../../Images/logo/login-img.png";
 import { useNavigate } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../Firebase/firebase.init";

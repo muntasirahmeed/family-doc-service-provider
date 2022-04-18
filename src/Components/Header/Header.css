@@ -1,7 +1,7 @@
 .banner {
   width: 100%;
   height: 100vh;
-  background-image: url("https://img.freepik.com/free-photo/white-texture_1203-1221.jpg?t=st=1650290374~exp=1650290974~hmac=52ca520033a85917f2d842750e1913658309c9d06ae91e1b3c63146dc7f4f299&w=2000");
+  background-image: url("../../Images/banner.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -9,7 +9,7 @@
 .banner2 {
   width: 100%;
   height: 105vh;
-  background-image: url("https://img.freepik.com/free-photo/gray-wall-textures-background_74190-4389.jpg?w=740&t=st=1650135376~exp=1650135976~hmac=914dc54c443518b713d792121b957447169817c81f510fbffa42d11229f520bd"),linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1));
+  background-image: url("../../Images/banner.jpg"),linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1));
   background-repeat: no-repeat;
   background-blend-mode: overlay;
   background-size: cover;
