@@ -45,26 +45,26 @@ const Navber = () => {
           }`}
         >
           <CustomLink
-            className="font-semibold  text-gray-600 cursor-pointer flex items-center"
+            className="font-semibold   cursor-pointer flex items-center"
             to='/'
           >
             {" "}
-            <HomeIcon className="w-5 text-cyan-700 mr-1"></HomeIcon> Home
+            <HomeIcon className="w-5  mr-1"></HomeIcon> Home
           </CustomLink>
           <CustomLink
-            className="font-semibold  text-gray-600 cursor-pointer flex items-center"
+            className="font-semibold   cursor-pointer flex items-center"
             to='/blogs'
           >
             {" "}
-            <BookOpenIcon className="w-6 text-cyan-700 mr-1"></BookOpenIcon>{" "}
+            <BookOpenIcon className="w-6  mr-1"></BookOpenIcon>{" "}
             Blogs
           </CustomLink>
           <CustomLink
-            className="font-semibold  text-gray-600 cursor-pointer flex items-center"
+            className="font-semibold   cursor-pointer flex items-center"
             to='/about'
           >
             {" "}
-            <InformationCircleIcon className="w-6 text-cyan-700 mr-1"></InformationCircleIcon>{" "}
+            <InformationCircleIcon className="w-6  mr-1"></InformationCircleIcon>{" "}
             About
           </CustomLink>
 
