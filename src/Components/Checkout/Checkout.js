@@ -21,7 +21,7 @@ const Checkout = () => {
         </h1>
         <form
           onSubmit={handlesSubmit}
-          className={`w-full md:w-1/2 mx-auto bg-slate-200 h-full md:h-[70vh] px-5 py-5 rounded-xl mb-10 space-y-4 ${
+          className={`w-full md:w-1/2 mx-auto bg-gray-300 h-full md:h-[70vh] px-5 py-5 rounded-xl mb-10 space-y-4 ${
             click ? "hidden" : "block"
           }`}
         >
@@ -121,9 +121,9 @@ const Checkout = () => {
             Procced Checkout
           </button>
         </form>
-        <div>
+        <div className="mt-20">
           <div
-            className={` text-center rounded-xl bg-gray-100 h-[70vh] flex items-center justify-center w-full md:w-4/12 mx-auto ${
+            className={` text-center rounded-xl  bg-gray-100 h-[50vh] flex items-center justify-center w-full md:w-4/12 mx-auto ${
               click ? "block" : "hidden"
             } relative`}
           >
@@ -136,7 +136,7 @@ const Checkout = () => {
             </div>
             <button
               onClick={() => setClick(false)}
-              className="bg-red-400 absolute top-4 right-4"
+              className="bg-gray-600 absolute top-4 right-4 rounded-sm"
             >
               <XIcon className="w-6 h-6 text-white"></XIcon>
             </button>

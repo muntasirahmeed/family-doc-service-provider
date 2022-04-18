@@ -1,8 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import doctor from "../../Images/doctor2.png";
 import Navber from "../Navber/Navber";
 import "./Header.css";
 const Header = () => {
+  const navigate = useNavigate()
   return (
     <div className=" banner ">
       <Navber></Navber>
@@ -13,12 +15,9 @@ const Header = () => {
             Welome To <span className="text-rose-700">FAMILY DOC</span>
           </h1>
           <p className="text-zinc-500  mb-3 font-semibold ">
-            There are many variations of passages of Lorem Ipsum available, but
-            the majority have suffered alteration in some form, by injected
-            humour, or randomised words which don't look even slightly
-            believable.
+            Hi my name is Dr.Sabrina Rahman , i am completed my degree in usa, and there i was an interniship, and i have also done 4 interniship in different country , i have deep knowladge about medical science .Check my bio.
           </p>
-          <button className="bg-cyan-700 text-white px-4 py-2 rounded font-semibold">
+          <button onClick={()=>navigate('/about')} className="bg-cyan-700 text-white px-4 py-2 rounded font-semibold">
             Dr. Sabrina Rahman
           </button>
         </div>

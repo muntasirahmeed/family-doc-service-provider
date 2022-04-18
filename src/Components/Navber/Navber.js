@@ -78,15 +78,15 @@ const Navber = () => {
               className="bg-cyan-700 text-sm text-white py-1 px-3 rounded-full  hover:bg-cyan-900 duration-300 font-semibold ease-in-out flex items-center"
               onClick={handleSignOut}
             >
-              Sign Out
+              Log Out
               <UserCircleIcon className="w-6 ml-1"></UserCircleIcon>
             </button>
           ) : (
             <button
               className="bg-cyan-700 text-sm text-white py-1 px-3 rounded-full  hover:bg-cyan-900 duration-300 font-semibold ease-in-out flex items-center"
-              onClick={() => navigate("/signup")}
+              onClick={() => navigate("/login")}
             >
-              Sign Up
+              Login
               <UserCircleIcon className="w-6 ml-1"></UserCircleIcon>
             </button>
           )}

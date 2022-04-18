@@ -24,7 +24,7 @@ const Login = () => {
   const from = location.state?.from?.pathname || "/";
   useEffect(() => {
     if (user1 || user2) {
-      toast.success("Successfull", { id: 1 });
+      toast.success("Login Successfull", { id: 1 });
       navigate(from, { replace: true });
     }
   }, [user2]);
