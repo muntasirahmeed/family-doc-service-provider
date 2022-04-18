@@ -1,6 +1,4 @@
 import React from "react";
-import Navber from "../Navber/Navber";
-
 const Spinner = () => {
   return (
     <div>

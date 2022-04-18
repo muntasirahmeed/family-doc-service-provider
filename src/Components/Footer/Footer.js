@@ -29,8 +29,8 @@ const Footer = () => {
             <div className=" space-y-1 mb-4  cursor-pointer">
               <p className="">Get help</p>
               <p className="">Read FQAs</p>
-              <p className="">View all sites</p>
-              <p className="">Resturents near me</p>
+              <p className="">View my all Blogs</p>
+              <p className="">simple blogs</p>
             </div>
             <div className="space-y-2">
               <p className="flex items-center">
