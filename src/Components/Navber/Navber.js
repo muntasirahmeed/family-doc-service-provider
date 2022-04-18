@@ -11,6 +11,7 @@ import { useNavigate } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../Firebase/firebase.init";
 import { signOut } from "firebase/auth";
+import CustomLink from "../CustomLink/CustomLink";
 const Navber = () => {
   const [user] = useAuthState(auth);
   const handleSignOut = () => {
@@ -43,29 +44,29 @@ const Navber = () => {
               : "top-[-490px] md:opacity-100 opacity-0 transition-all ease-in"
           }`}
         >
-          <span
+          <CustomLink
             className="font-semibold  text-gray-600 cursor-pointer flex items-center"
-            onClick={() => navigate("/")}
+            to='/'
           >
             {" "}
             <HomeIcon className="w-5 text-cyan-700 mr-1"></HomeIcon> Home
-          </span>
-          <span
+          </CustomLink>
+          <CustomLink
             className="font-semibold  text-gray-600 cursor-pointer flex items-center"
-            onClick={() => navigate("/blogs")}
+            to='/blogs'
           >
             {" "}
             <BookOpenIcon className="w-6 text-cyan-700 mr-1"></BookOpenIcon>{" "}
             Blogs
-          </span>
-          <span
+          </CustomLink>
+          <CustomLink
             className="font-semibold  text-gray-600 cursor-pointer flex items-center"
-            onClick={() => navigate("/about")}
+            to='/about'
           >
             {" "}
             <InformationCircleIcon className="w-6 text-cyan-700 mr-1"></InformationCircleIcon>{" "}
             About
-          </span>
+          </CustomLink>
 
           {user ? (
             <button
