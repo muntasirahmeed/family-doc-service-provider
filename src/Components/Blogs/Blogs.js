@@ -64,7 +64,7 @@ const Blogs = () => {
             </div>
           </div>
           <div className="bg-gray-200 rounded-md p-5 w-full md:w-1/2 mx-auto mt-5">
-            <span className="font-semibold text-rose-400">Blog-02</span>
+            <span className="font-semibold text-rose-400">Blog-03</span>
             <h1 className="text-2xl my-3 text-center md:text-left">
               What other services does firebase provide other than
               authentication
