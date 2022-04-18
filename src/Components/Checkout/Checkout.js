@@ -1,7 +1,6 @@
 import { CheckCircleIcon, XIcon } from "@heroicons/react/solid";
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import Modal from "../Modal/Modal";
 import Navber from "../Navber/Navber";
 
 const Checkout = () => {

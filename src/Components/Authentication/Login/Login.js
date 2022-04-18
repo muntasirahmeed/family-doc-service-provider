@@ -1,4 +1,3 @@
-import { async } from "@firebase/util";
 import React, { useEffect, useState } from "react";
 import {
   useAuthState,
@@ -57,7 +56,8 @@ const Login = () => {
   };
   const resetPassword = async () => {
     if (email.value) {
-      await sendPasswordResetEmail(email);
+      await sendPasswordResetEmail(email.value);
+
       toast.success("Password Reset Email Sent", { id: 1 });
     } else {
       toast.error("Please Enter Email");
@@ -128,7 +128,7 @@ const Login = () => {
                   <small>
                     Forget Password ?{" "}
                     <span
-                      onClick={async () => resetPassword()}
+                      onClick={resetPassword}
                       className="text-cyan-600 cursor-pointer"
                     >
                       Reset

@@ -1,11 +1,11 @@
+
 import React, { useEffect, useState } from "react";
 import {
-  useAuthState,
   useCreateUserWithEmailAndPassword,
   useSendEmailVerification,
 } from "react-firebase-hooks/auth";
 import toast from "react-hot-toast";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link,  useNavigate } from "react-router-dom";
 import auth from "../../../Firebase/firebase.init";
 import Navber from "../../Navber/Navber";
 import Spinner from "../../Spinner/Spinner";
@@ -16,18 +16,15 @@ const SignUp = () => {
   const [email, setEmail] = useState({ value: "", error: "" });
   const [password, setPassword] = useState({ value: "", error: "" });
   const [confrimPass, setCofrimPass] = useState({ value: "", error: "" });
-  const [createUserWithEmailAndPassword, laoding, error] =
+  const [createUserWithEmailAndPassword, user1, laoding, error] =
     useCreateUserWithEmailAndPassword(auth);
   const [sendEmailVerification, sending] = useSendEmailVerification(auth);
-  const [user] = useAuthState(auth);
   const navigate = useNavigate();
-  const location = useLocation();
-  const from = location.state?.from?.pathname || "/";
   useEffect(() => {
-    if (user) {
-      navigate(from, { replace: true });
+    if (user1) {
+      navigate("/");
     }
-  }, [user]);
+  }, [user1]);
   useEffect(() => {
     if (error?.message) {
       if (error?.message.includes("already")) {
@@ -74,7 +71,7 @@ const SignUp = () => {
     if (email.value && password.value && confrimPass.value && name.value) {
       await createUserWithEmailAndPassword(email.value, password.value);
       await sendEmailVerification();
-      toast.success("Varification Email Sent");
+      toast.success('Varification email sent')
     }
   };
   return (
@@ -147,7 +144,10 @@ const SignUp = () => {
                 )}
               </div>
 
-              <button className="mt-5 w-full text-white bg-cyan-700 font-semibold py-2 rounded-md  tracking-wide">
+              <button
+                onClick={async () => {}}
+                className="mt-5 w-full text-white bg-cyan-700 font-semibold py-2 rounded-md  tracking-wide"
+              >
                 Register
               </button>
               <p className="text-center text-gray-700 mt-3">
