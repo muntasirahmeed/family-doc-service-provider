@@ -12,19 +12,19 @@ const Checkout = () => {
   };
 
   return (
-    <div className="banner">
+    <div className="banner3  ">
       <Navber></Navber>
-      <div className="h-full md:h-[85vh] max-w-[1280px] mx-auto font-poppins  py-5">
-        <h1 className=" text-4xl mb-10 text-center font-semibold text-cyan-700">
-          Welcome To Chekcout
+      <div className="h-full max-w-[1280px] mx-auto font-poppins  py-5">
+        <h1 className="text-2xl md:text-4xl my-5 text-center font-semibold text-cyan-700">
+           Chekcout 
         </h1>
         <form
           onSubmit={handlesSubmit}
-          className={`w-full md:w-1/2 mx-auto bg-gray-300 h-full md:h-[70vh] px-5 py-5 rounded-xl mb-10 space-y-4 ${
+          className={`w-full md:w-1/2 mx-auto bg-gray-300  px-5 py-5 rounded-xl  space-y-4 ${
             click ? "hidden" : "block"
           }`}
         >
-          <h1 className="text-center uppercase text-2xl font-semibold text-cyan-700 mb-10">
+          <h1 className="text-center uppercase text-2xl font-semibold text-cyan-700 mb-5">
             Fill up this form{" "}
           </h1>
           <div className="flex items-center space-x-5">
