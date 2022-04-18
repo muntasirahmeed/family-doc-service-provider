@@ -1,6 +1,6 @@
 import React from "react";
 import Navber from "../Navber/Navber";
-import myImg from "../../Images/profJile.png";
+import myImg from "../../Images/profile.png";
 const About = () => {
   return (
     <div className="banner">
